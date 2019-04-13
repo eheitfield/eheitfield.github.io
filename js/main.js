@@ -1,6 +1,10 @@
 
 adjustMainTopOffset();
 window.onresize = adjustMainTopOffset;
+var title = document.getElementsByClassName("page-title")[0];
+title.onclick = homeSelected;
+var homeItem = document.getElementsByClassName("nav-home")[0];
+homeItem.onclick = homeSelected;
 var appBoxes = document.getElementsByClassName("app-box");
 for (box of appBoxes) {
 	box.onclick = appSelected;
@@ -16,6 +20,11 @@ function adjustMainTopOffset() {
 }
 
 function appSelected(event) {
-	alert(event.currentTarget.id);
+//	alert(event.currentTarget.id);
+	window.location.href = "./our-congress.html"
+}
+
+function homeSelected(event) {
+	window.location.href = "./index.html"
 }
 
