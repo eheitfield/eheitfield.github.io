@@ -1,0 +1,154 @@
+
+/* Overall format */
+
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background-color: #c0d5e3;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* Page header */
+
+header {
+/*	position: relative; */
+	position: fixed;
+	top: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.page-title {
+	/* center in header */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+  	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+	color: white;
+}
+
+.header-image {
+	width: 100vw;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+.page-title h1 {
+	font-size: 5vw;
+	margin: 0.3%;
+}
+
+.page-title h2 {
+	font-size: 3vw;
+	margin: 0.3%;
+}
+
+/* Navigation bar */
+
+.nav-bar {
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	margin: 0;
+  	padding: 0;
+  	background-color: #333;
+}
+
+.nav-bar .nav-home, .nav-bar .nav-item {
+  	display: inline-block;
+  	color: white;
+  	text-align: left;
+  	padding: 16px 14px;
+  	text-decoration: none;
+}
+
+.nav-bar .nav-home {
+  	text-align: left;
+  	margin-right: auto;	
+}
+
+.nav-bar .nav-item {
+  	text-align: right;
+}
+
+.nav-bar .nav-home:hover, .nav-bar .nav-item:hover {
+  	background-color: #111;
+}
+
+
+/* App boxes */
+
+.app-boxes {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.app-box {
+	flex: 1;
+	box-sizing: border-box;
+	padding: 1%;
+	margin: 1%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95vw;
+	background-color: #c9bd97;
+}
+
+.app-title {
+	margin: 0.2em 0px;
+	font-size: 5vw;
+	width: 100%;
+	text-align: center;
+}
+
+.app-text {
+	margin: 0.2em 0px;
+	font-size: 3vw;
+	text-align: left;
+}
+
+.app-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+
+}
+
+.app-icon {
+	border-radius: 15%;
+	margin: 1%;
+	height: 100px;
+	width: 100px;
+}
+
+@media screen and (max-width: 800px) {
+	.nav-bar {
+		display: none;
+	}	
+}
+
+@media screen and (max-width: 600px) {
+	.app-info {
+		flex-direction: column;
+	}
+	
+	.app-title {
+		font-size: 2em;
+	}
+	
+	.app-text {
+		font-size: 1.25em;
+		text-align: center;
+	}
+
+}
