@@ -21,7 +21,16 @@ function adjustMainTopOffset() {
 
 function appSelected(event) {
 //	alert(event.currentTarget.id);
-	window.location.href = "./our-congress.html"
+	var id = event.currentTarget.id;
+	if (id == "item-our-congress" || id == "box-our-congress") {
+		window.location.href = "./our-congress.html"
+	} else if (id == "item-visual-task-timer" || id == "box-visual-task-timer") {
+		window.location.href = "./visual-task-timer.html"
+	} else if (id == "item-doppler-ball" || id == "box-doppler-ball") {
+		window.location.href = "./doppler-ball.html"
+	} else {
+		alert(id)
+	}
 }
 
 function homeSelected(event) {
