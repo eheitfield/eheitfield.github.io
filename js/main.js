@@ -1,7 +1,8 @@
 
-adjustMainTopOffset();
-window.onresize = adjustMainTopOffset;
-var title = document.getElementsByClassName("page-title")[0];
+window.onload = adjustPageLayout;
+window.onresize = adjustPageLayout;
+
+var title = document.getElementById("page-title");
 title.onclick = homeSelected;
 var homeItem = document.getElementsByClassName("nav-home")[0];
 homeItem.onclick = homeSelected;
@@ -14,13 +15,23 @@ for (item of navItems) {
 	item.onclick = appSelected;
 }
 
-function adjustMainTopOffset() {
-	var height = document.getElementsByTagName("header")[0].offsetHeight;
-	document.getElementsByTagName("main")[0].style.marginTop = height + 'px';	
+function adjustPageLayout() {
+	var titleBar = document.getElementById("title-bar");
+	var header = document.getElementsByTagName("header")[0];
+	var mainBody = document.getElementsByTagName("main")[0];
+	// place titleBar
+	if (window.innerWidth < 800) {
+		// titleBar will be fixed at top of page
+		header.appendChild(titleBar);
+	} else {
+		// titleBar will scroll with page
+		mainBody.insertBefore(titleBar,mainBody.childNodes[0]);
+	}
+	// shift maindBody so it isn't covered by header
+	mainBody.style.marginTop = header.offsetHeight + 'px';	
 }
 
 function appSelected(event) {
-//	alert(event.currentTarget.id);
 	var id = event.currentTarget.id;
 	if (id == "item-our-congress" || id == "box-our-congress") {
 		window.location.href = "./our-congress.html"
