@@ -4,29 +4,30 @@ window.onresize = adjustPageLayout;
 
 var title = document.getElementById("page-title");
 title.onclick = homeSelected;
-var homeItem = document.getElementsByClassName("nav-home")[0];
+var homeItem = document.getElementById("item-home");
 homeItem.onclick = homeSelected;
 var appBoxes = document.getElementsByClassName("app-box");
 for (box of appBoxes) {
 	box.onclick = appSelected;
 }
-var navItems = document.getElementsByClassName("nav-item")
+var navItems = document.getElementsByClassName("dropdown-item")
 for (item of navItems) {
 	item.onclick = appSelected;
 }
 
 function adjustPageLayout() {
-	var titleBar = document.getElementById("title-bar");
+//	var titleBar = document.getElementById("title-bar");
 	var header = document.getElementsByTagName("header")[0];
 	var mainBody = document.getElementsByTagName("main")[0];
 	// place titleBar
-	if (window.innerWidth < 800) {
+/*	if (window.innerWidth < 800) {
 		// titleBar will be fixed at top of page
 		header.appendChild(titleBar);
 	} else {
 		// titleBar will scroll with page
 		mainBody.insertBefore(titleBar,mainBody.childNodes[0]);
 	}
+	*/
 	// shift maindBody so it isn't covered by header
 	mainBody.style.marginTop = header.offsetHeight + 'px';	
 }

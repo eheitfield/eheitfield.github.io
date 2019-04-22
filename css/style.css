@@ -1,9 +1,50 @@
 
+/* Color Palette
+
+	A southwest palette extracted from an image of the Grand Canyon
+
+	rgb(193,213,226);	sky blue 
+	rgb(201,188,153);	gold 
+	rgb(141,113,113);	red clay 
+	rgb(234,236,238);	white clouds 
+	rgb(187,160,154);	pink rocks 
+	rgb(90,76,76);		dark red clay 
+	rgb(62,68,85);		dark blue rocks 
+	
+*/
+
+/* color theme */
+
+body {
+	background-color: rgb(193,213,226);	/* sky blue */
+}
+
+#nav-bar {
+	background-color: rgb(90,76,76);	/* dark red clay */
+}
+
+.nav-item:hover {
+  	background-color: rgb(187,160,154);	/* pink rocks */
+}
+
+.dropdown-item {
+	background-color: rgb(90,76,76);	/* dark red clay */
+}
+
+.dropdown-item:hover {
+	background-color: rgb(187,160,154);	/* pink rocks */
+}
+
+.app-box {
+	background-color: rgb(201,188,153);	/* gold */
+}
+
+
+
 /* Overall format */
 
 body {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	background-color: #c0d5e3;
 	padding: 0px;
 	margin: 0px; 
 }
@@ -62,29 +103,39 @@ header {
   	margin: 0;
   	padding: 0;
   	width: 100%;
-  	background-color: #333;
 }
 
-#nav-bar .nav-home, #nav-bar .nav-item {
+.nav-item {
   	display: inline-block;
   	color: white;
   	text-align: left;
-  	padding: 16px 14px;
+  	padding: 0.5em 1em;
+  	font-size: 1em;
   	text-decoration: none;
 }
 
-#nav-bar .nav-home {
-  	text-align: left;
-  	margin-right: auto;	
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top;
+	left;
+	z-index: 1;
 }
 
-#nav-bar .nav-item {
-  	text-align: right;
+.dropdown-item {
+	float: none;
+	text-align: left;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	font-size: 1em;
+	display: block;
+	color: inherit;
 }
 
-#nav-bar .nav-home:hover, #nav-bar .nav-item:hover {
-  	background-color: #111;
+.nav-item:hover .dropdown-content {
+	display: block;
 }
+
 
 /* Content */
 
@@ -118,7 +169,6 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	width: 95vw;
-	background-color: #c9bd97;
 }
 
 .app-title {
@@ -151,10 +201,6 @@ header {
 
 @media screen and (max-width: 800px) {
 
-	#nav-bar {
-		display: none;
-	}	
-	
 	.app-title {
 		font-size: 2em;
 	}
