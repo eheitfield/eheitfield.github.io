@@ -1,34 +1,24 @@
 
+// setup observers
 window.onload = adjustPageLayout;
 window.onresize = adjustPageLayout;
-
-var title = document.getElementById("page-title");
-title.onclick = homeSelected;
-var homeItem = document.getElementById("item-home");
-homeItem.onclick = homeSelected;
+window.onclick = hideDropdowns;
+document.getElementById("page-title").onclick = homeSelected;
+document.getElementById("item-home").onclick = homeSelected;
+document.getElementById("apps-dropdown-title").onclick = appDropdownSelected;
+document.getElementById("contact-dropdown-title").onclick = contactDropdownSelected;
 var appBoxes = document.getElementsByClassName("app-box");
 for (box of appBoxes) {
 	box.onclick = appSelected;
 }
-var navItems = document.getElementsByClassName("dropdown-item")
+var navItems = document.getElementsByClassName("dropdown-item");
 for (item of navItems) {
 	item.onclick = appSelected;
 }
 
 function adjustPageLayout() {
-//	var titleBar = document.getElementById("title-bar");
 	var header = document.getElementsByTagName("header")[0];
 	var mainBody = document.getElementsByTagName("main")[0];
-	// place titleBar
-/*	if (window.innerWidth < 800) {
-		// titleBar will be fixed at top of page
-		header.appendChild(titleBar);
-	} else {
-		// titleBar will scroll with page
-		mainBody.insertBefore(titleBar,mainBody.childNodes[0]);
-	}
-	*/
-	// shift maindBody so it isn't covered by header
 	mainBody.style.marginTop = header.offsetHeight + 'px';	
 }
 
@@ -49,3 +39,26 @@ function homeSelected(event) {
 	window.location.href = "./index.html"
 }
 
+function hideDropdowns(event) {
+	var id = event.target.id;
+	if (id != "apps-dropdown-title") {
+		var dropdownContent = document.getElementById("apps-dropdown-content");
+		if (dropdownContent.classList.contains("show-dropdown")) {
+			dropdownContent.classList.remove("show-dropdown");
+		}
+	}
+	if (id != "contact-dropdown-title") {
+		var dropdownContent = document.getElementById("contact-dropdown-content");
+		if (dropdownContent.classList.contains("show-dropdown")) {
+			dropdownContent.classList.remove("show-dropdown");
+		}
+	}
+}
+
+function appDropdownSelected(event) {
+	document.getElementById("apps-dropdown-content").classList.toggle("show-dropdown");
+}
+
+function contactDropdownSelected(event) {
+	document.getElementById("contact-dropdown-content").classList.toggle("show-dropdown");
+}

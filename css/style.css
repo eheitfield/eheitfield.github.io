@@ -106,19 +106,23 @@ header {
 }
 
 .nav-item {
-  	display: inline-block;
+ /* 	display: inline-block; */
   	color: white;
   	text-align: left;
   	padding: 0.5em 1em;
   	font-size: 1em;
   	text-decoration: none;
+  	cursor: pointer;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
 }
 
 .dropdown-content {
 	display: none;
 	position: absolute;
-	top;
-	left;
 	z-index: 1;
 }
 
@@ -132,7 +136,13 @@ header {
 	color: inherit;
 }
 
+/*
 .nav-item:hover .dropdown-content {
+	display: block;
+}
+*/
+
+.show-dropdown {
 	display: block;
 }
 
@@ -159,6 +169,7 @@ header {
 	align-items: stretch;
 	justify-content: space-between;
 	padding-top: 0.5%;
+	cursor: pointer;
 }
 
 .app-box {
