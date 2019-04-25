@@ -21,10 +21,15 @@ body {
 
 #nav-bar {
 	background-color: rgb(90,76,76);	/* dark red clay */
+	color: rgb(234,236,238);			/* white clouds */ 
 }
 
 .nav-item:hover {
   	background-color: rgb(187,160,154);	/* pink rocks */
+}
+
+.dropdown-title:hover{
+	background-color: rgb(187,160,154);	/* pink rocks */	
 }
 
 .dropdown-item {
@@ -35,11 +40,23 @@ body {
 	background-color: rgb(187,160,154);	/* pink rocks */
 }
 
-.app-box {
-	background-color: rgb(201,188,153);	/* gold */
+#page-title h1 {
+	color: rgb(234,236,238);			/* white clouds */ 
 }
 
+.app-box {
+	background-color: rgb(201,188,153);	/* gold */
+	color: rgb(62,68,85);				/* dark blue rocks */ 
+}
 
+a {
+	color: rgb(187,160,154);	/* pink rocks */
+}
+
+footer {
+	background-color: rgb(90,76,76);	/* dark red clay */
+	color: rgb(234,236,238);			/* white clouds */ 
+}
 
 /* Overall format */
 
@@ -48,7 +65,6 @@ body {
 	padding: 0px;
 	margin: 0px; 
 }
-
 
 /* Page header */
 
@@ -64,6 +80,7 @@ header {
 #title-bar{
 	position: relative; 
 	top: 0px; 
+	cursor: pointer;
 }
 
 #page-title {
@@ -89,36 +106,30 @@ header {
 	margin: 0.3%;
 }
 
-#page-title h2 {
-	font-size: 3vw;
-	margin: 0.3%;
-}
-
 /* Navigation bar */
 
 #nav-bar {
-  	display: flex;
-  	flex-direction: row;
-  	flex-wrap: wrap;
+	display: flex;
   	margin: 0;
   	padding: 0;
   	width: 100%;
 }
 
 .nav-item {
- /* 	display: inline-block; */
-  	color: white;
   	text-align: left;
   	padding: 0.5em 1em;
   	font-size: 1em;
   	text-decoration: none;
   	cursor: pointer;
+  	background-color: inherit;
+  	color: inherit;
 }
 
-.dropdown {
-	float: left;
+.dropdown-container {
 	overflow: hidden;
+  	background-color: inherit;
 }
+
 
 .dropdown-content {
 	display: none;
@@ -133,14 +144,7 @@ header {
 	text-decoration: none;
 	font-size: 1em;
 	display: block;
-	color: inherit;
 }
-
-/*
-.nav-item:hover .dropdown-content {
-	display: block;
-}
-*/
 
 .show-dropdown {
 	display: block;
@@ -168,18 +172,16 @@ header {
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: space-between;
-	padding-top: 0.5%;
+	padding-top: 0%;
 	cursor: pointer;
 }
 
 .app-box {
 	flex: 1;
 	box-sizing: border-box;
-	padding: 1.5%;
-	margin: 1%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 95vw;
+	padding: 2%;
+	margin: 0.1% 0% 0.1% 0%;  /* top right bottom left */
+	width: 100vw;
 }
 
 .app-title {
@@ -208,6 +210,19 @@ header {
 	width: 100px;
 }
 
+/* Footer */
+footer {
+	padding: 3%;
+	text-align: center;
+}
+
+#contact-pterosaur {
+	max-width: 94%; 
+	width: 36em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* responsive design for small screens */
 
 @media screen and (max-width: 800px) {
@@ -216,8 +231,12 @@ header {
 		font-size: 2em;
 	}
 	
-	.app-text {
+	.app-text, #contact-pterosaur {
 		font-size: 1.25em;
+	}
+
+	#extended-home-item {
+		display: none;
 	}
 
 }

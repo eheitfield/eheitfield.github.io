@@ -12,8 +12,9 @@
     	<header>
 	    	<nav>
 	    		<div id = "nav-bar">
-	    			<div class = "nav-item" id = "item-home"><b>Pterosaur</b></div>
-                    <div class = "nav-item" id = "apps-dropdown-title">Our Apps
+	    			<div class = "nav-item" id = "item-home"><b>Pterosaur</b><b id="extended-home-item"> Design</b></div>
+                    <div class = "dropdown-container">
+                        <div class = "nav-item" id = "apps-dropdown-title">Our Apps</div>
                         <div class = "dropdown-content" id = "apps-dropdown-content">
                             <div class = "dropdown-item" id = "item-our-congress">Our Congress</div>
                             <div class = "dropdown-item" id = "item-visual-task-timer">Visual Task Timer</div>
@@ -22,28 +23,21 @@
                             <div class = "dropdown-item" id = "item-magic-castle-abc">Magic Castle ABC</div>
                         </div>
                     </div>
-                        <div class = "nav-item" id = "contact-dropdown-title">Contact Us
-                            <div class = "dropdown-content" id = "contact-dropdown-content">
-                                <div class = "dropdown-item" id = "item-email">E-Mail</div>
-                                <div class = "dropdown-item" id = "item-twitter">Twitter</div>
-                            </div>
-                        </div>
-                    </div>
-				</div>   		
+                    <div class = "nav-item" id = "contact-dropdown-title">Contact Us</div>
+                </div>
 	    	</nav>
     	</header>
     	<main>
             <div id = "title-bar">
                 <div id = "page-title">
                     <h1>Pterosaur Design</h1>
-                    <h2>Do simple things well</h2> 
                 </div>
                 <img src="resources/hazy-canyon.jpg" alt="Grand Canyon shrouded in haze" id="header-image">
             </div>
     		<div class="app-boxes">
     			<div class="app-box" id="box-our-congress">
     				<h3 class="app-title">Our Congress</h3>
-    				<h4 class="app-text">Follow the activity of the U.S. Congress and contact your representatives</h4>
+    				<h4 class="app-text">Make your voice heard in Congress</h4>
 	    			<img class="app-icon" src="resources/Our Congress 180.png" alt="Our Congress icon">
     			</div>
     			<div class="app-box" id="box-visual-task-timer">
@@ -68,6 +62,13 @@
     			</div>
 			</div>
     	</main>
+        <footer>
+            <div id = "contact-pterosaur">
+                <h3>Contact Pterosaur Design</h3>
+                <p>Pterosaur Design is an independet iOS App development studio run by Erik Heitfield. We are committed to producing high-quality software that brings joy to our users and hopefully makes the world just a little bit better. We love to receive feedback on our apps. You can e-mail us <a href="mailto:pterosaurdesign@gmail.com">here</a>.</p>
+                <a href="https://twitter.com/eheitfield?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @eheitfield</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </footer>
         <script src="js/main.js"></script>
     </body>
 </html>

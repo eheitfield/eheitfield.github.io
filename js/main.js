@@ -6,7 +6,7 @@ window.onclick = hideDropdowns;
 document.getElementById("page-title").onclick = homeSelected;
 document.getElementById("item-home").onclick = homeSelected;
 document.getElementById("apps-dropdown-title").onclick = appDropdownSelected;
-document.getElementById("contact-dropdown-title").onclick = contactDropdownSelected;
+document.getElementById("contact-dropdown-title").onclick = contactSelected;
 var appBoxes = document.getElementsByClassName("app-box");
 for (box of appBoxes) {
 	box.onclick = appSelected;
@@ -39,6 +39,14 @@ function homeSelected(event) {
 	window.location.href = "./index.html"
 }
 
+function contactSelected(event) {
+	window.location.href = "#contact-pterosaur"
+}
+
+function appDropdownSelected(event) {
+	document.getElementById("apps-dropdown-content").classList.toggle("show-dropdown");
+}
+
 function hideDropdowns(event) {
 	var id = event.target.id;
 	if (id != "apps-dropdown-title") {
@@ -55,10 +63,3 @@ function hideDropdowns(event) {
 	}
 }
 
-function appDropdownSelected(event) {
-	document.getElementById("apps-dropdown-content").classList.toggle("show-dropdown");
-}
-
-function contactDropdownSelected(event) {
-	document.getElementById("contact-dropdown-content").classList.toggle("show-dropdown");
-}
