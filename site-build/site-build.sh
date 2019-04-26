@@ -1,5 +1,5 @@
 #!/bin/bash
-pageList="index our-congress doppler-ball visual-task-timer"
+pageList="index our-congress doppler-ball visual-task-timer placemark magic-castle"
 for page in $pageList
 do 
 	outfile="$page"'.html'

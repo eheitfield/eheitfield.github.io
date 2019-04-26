@@ -49,6 +49,10 @@ body {
 	color: rgb(62,68,85);				/* dark blue rocks */ 
 }
 
+.app-box:hover {
+	background-color: rgb(187,160,154);	/* pink rocks */	
+}
+
 a {
 	color: rgb(187,160,154);	/* pink rocks */
 }
@@ -80,6 +84,8 @@ header {
 #title-bar{
 	position: relative; 
 	top: 0px; 
+	margin: 0px;
+	padding: 0px;
 	cursor: pointer;
 }
 
@@ -180,7 +186,7 @@ header {
 	flex: 1;
 	box-sizing: border-box;
 	padding: 2%;
-	margin: 0.1% 0% 0.1% 0%;  /* top right bottom left */
+	margin: 0% 0% 0.2% 0%;  /* top right bottom left */
 	width: 100vw;
 }
 

@@ -3,7 +3,9 @@
 window.onload = adjustPageLayout;
 window.onresize = adjustPageLayout;
 window.onclick = hideDropdowns;
-document.getElementById("page-title").onclick = homeSelected;
+if (document.getElementById("page-title")) {
+	document.getElementById("page-title").onclick = homeSelected;
+}
 document.getElementById("item-home").onclick = homeSelected;
 document.getElementById("apps-dropdown-title").onclick = appDropdownSelected;
 document.getElementById("contact-dropdown-title").onclick = contactSelected;
@@ -30,6 +32,10 @@ function appSelected(event) {
 		window.location.href = "./visual-task-timer.html"
 	} else if (id == "item-doppler-ball" || id == "box-doppler-ball") {
 		window.location.href = "./doppler-ball.html"
+	} else if (id == "item-placemark-plus" || id == "box-placemark-plus") {
+		window.location.href = "./placemark.html"
+	} else if (id == "item-magic-castle" || id == "box-magic-castle") {
+		window.location.href = "./magic-castle.html"
 	} else {
 		alert(id)
 	}
@@ -51,12 +57,6 @@ function hideDropdowns(event) {
 	var id = event.target.id;
 	if (id != "apps-dropdown-title") {
 		var dropdownContent = document.getElementById("apps-dropdown-content");
-		if (dropdownContent.classList.contains("show-dropdown")) {
-			dropdownContent.classList.remove("show-dropdown");
-		}
-	}
-	if (id != "contact-dropdown-title") {
-		var dropdownContent = document.getElementById("contact-dropdown-content");
 		if (dropdownContent.classList.contains("show-dropdown")) {
 			dropdownContent.classList.remove("show-dropdown");
 		}
