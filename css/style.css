@@ -10,7 +10,8 @@
 	rgb(187,160,154);	pink rocks 
 	rgb(90,76,76);		dark red clay 
 	rgb(62,68,85);		dark blue rocks 
-	rgb(1,14,26);		dark dark blue
+	rgb(1,14,26);		doppler ball blue
+	rgb(119,208,253)	magic castle blue
 	
 */
 
@@ -41,7 +42,7 @@ body {
 	background-color: rgb(187,160,154);	/* pink rocks */
 }
 
-#page-title h1 {
+#title-bar {
 	color: rgb(234,236,238);			/* white clouds */ 
 }
 
@@ -63,9 +64,14 @@ body {
 	color: white;
 }
 
-#dopper-ball-article {
-	background-color: rgb(1,14,26);		/* dark dark blue */
+/* #dopper-ball-article {
+	background-color: rgb(1,14,26);	
 	color: white;	
+}
+*/
+
+#magic-castle-page {
+	background-color: rgb(119,208,253)	/* magic castle blue */
 }
 
 body a {
@@ -125,9 +131,13 @@ header {
 	margin: 0px;
 }
 
-#page-title h1 {
+#title-bar h1 {
 	font-size: 5vw;
-	margin: 0.3%;
+	margin-bottom: 0.25%; 
+}
+
+#title-bar h2 {
+	font-size: 3wv;
 }
 
 /* Navigation bar */
