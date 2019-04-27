@@ -10,6 +10,7 @@
 	rgb(187,160,154);	pink rocks 
 	rgb(90,76,76);		dark red clay 
 	rgb(62,68,85);		dark blue rocks 
+	rgb(1,14,26);		dark dark blue
 	
 */
 
@@ -53,13 +54,31 @@ body {
 	background-color: rgb(187,160,154);	/* pink rocks */	
 }
 
-a {
-	color: rgb(187,160,154);	/* pink rocks */
+.app-article {
+	color: rgb(62,68,85);				/* dark blue rocks */ 
+}
+
+#doppler-ball-page {
+	background-color: rgb(1,14,26);		/* dark dark blue */
+	color: white;
+}
+
+#dopper-ball-article {
+	background-color: rgb(1,14,26);		/* dark dark blue */
+	color: white;	
+}
+
+body a {
+	color: rgb(90,76,76);		/* dark red clay */ 
 }
 
 footer {
 	background-color: rgb(90,76,76);	/* dark red clay */
 	color: rgb(234,236,238);			/* white clouds */ 
+}
+
+footer a {
+	color: rgb(193,213,226);		/* sky blue */ ;
 }
 
 /* Overall format */
@@ -97,7 +116,6 @@ header {
   	transform: translate(-50%, -50%);
 	text-align: center;
 	width: 100%;
-	color: white;
 }
 
 #header-image {
@@ -164,6 +182,15 @@ header {
 	width: 36em;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.app-store-badge{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .article-image {
@@ -186,14 +213,14 @@ header {
 	flex: 1;
 	box-sizing: border-box;
 	padding: 2%;
-	margin: 0% 0% 0.2% 0%;  /* top right bottom left */
+	margin: 0% 0% 0.3% 0%;  /* top right bottom left */
 	width: 100vw;
 }
 
 .app-title {
 	margin-top: 0em;
 	margin-bottom: 0.25em;
-	font-size: 3em;
+	font-size: 2.5em;
 	width: 100%;
 	text-align: center;
 }
@@ -201,7 +228,7 @@ header {
 .app-text {
 	margin-top: 0em;
 	margin-bottom: 0.75em;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	text-align: center;
 }
 
@@ -218,7 +245,8 @@ header {
 
 /* Footer */
 footer {
-	padding: 3%;
+	padding-top: 1.5%;
+	padding-bottom: 3%;
 	text-align: center;
 }
 
