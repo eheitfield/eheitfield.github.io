@@ -4,11 +4,12 @@
 	A southwest palette extracted from an image of the Grand Canyon
 
 	rgb(193,213,226);	sky blue 
+	rgb(215,171,160);	sand
 	rgb(201,188,153);	gold 
 	rgb(141,113,113);	red clay 
 	rgb(234,236,238);	white clouds 
-	rgb(187,160,154);	pink rocks 
-	rgb(90,76,76);		dark red clay 
+	rgb(191,154,157);	pink rocks 
+	rgb(113,63,62);		dark red clay 
 	rgb(62,68,85);		dark blue rocks 
 	rgb(1,14,26);		doppler ball blue
 	rgb(119,208,253)	magic castle blue
@@ -18,32 +19,32 @@
 /* color theme */
 
 body {
-	background-color: rgb(193,213,226);	/* sky blue */
+	background-color: rgb(215,171,160);	/* sand */
 }
 
 #nav-bar {
-	background-color: rgb(90,76,76);	/* dark red clay */
+	background-color: rgb(113,63,62);	/* dark red clay */
 	color: rgb(234,236,238);			/* white clouds */ 
 }
 
 .nav-item:hover {
-  	background-color: rgb(187,160,154);	/* pink rocks */
+  	background-color: rgb(191,154,157);	/* pink rocks */
 }
 
 .dropdown-title:hover{
-	background-color: rgb(187,160,154);	/* pink rocks */	
+	background-color: rgb(191,154,157);	/* pink rocks */	
 }
 
 .dropdown-item {
-	background-color: rgb(90,76,76);	/* dark red clay */
+	background-color: rgb(113,63,62);	/* dark red clay */
 }
 
 .dropdown-item:hover {
-	background-color: rgb(187,160,154);	/* pink rocks */
+	background-color: rgb(191,154,157);	/* pink rocks */
 }
 
 #title-bar {
-	color: rgb(234,236,238);			/* white clouds */ 
+	color: rgb(193,213,226);			/* white clouds */ 
 }
 
 .app-box {
@@ -52,34 +53,40 @@ body {
 }
 
 .app-box:hover {
-	background-color: rgb(187,160,154);	/* pink rocks */	
+	background-color: rgb(191,154,157);	/* pink rocks */	
 }
 
-.app-article {
-	color: rgb(62,68,85);				/* dark blue rocks */ 
+#index-body {
+	background-color: rgb(193,213,226);	/* sky blue */ 
 }
 
-#doppler-ball-page {
+#visual-task-timer-body {
+	background-color: rgb(193,213,226);	/* sky blue */ 
+}
+
+#doppler-ball-body {
 	background-color: rgb(1,14,26);		/* dark dark blue */
 	color: white;
 }
 
-/* #dopper-ball-article {
-	background-color: rgb(1,14,26);	
-	color: white;	
-}
-*/
-
-#magic-castle-page {
+#magic-castle-body {
 	background-color: rgb(119,208,253)	/* magic castle blue */
 }
 
+.app-boxes {
+	background-color: inherit;
+}
+
+.app-article {
+	background-color: inherit;
+}
+
 body a {
-	color: rgb(90,76,76);		/* dark red clay */ 
+	color: rgb(113,63,62);		/* dark red clay */ 
 }
 
 footer {
-	background-color: rgb(90,76,76);	/* dark red clay */
+	background-color: rgb(113,63,62);	/* dark red clay */
 	color: rgb(234,236,238);			/* white clouds */ 
 }
 
@@ -137,7 +144,7 @@ header {
 }
 
 #title-bar h2 {
-	font-size: 3wv;
+	font-size: 3vw;
 }
 
 /* Navigation bar */
