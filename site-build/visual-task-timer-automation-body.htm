@@ -1,0 +1,50 @@
+			<main class="app-suppliment">
+				<div class="app-article">
+					<h2>Visual Task Timer Automation Support</h2>
+					<p>Visual Task Timer supports iOS automation through both Siri shortcuts and URL schemes. Both methods allow you to launch Visual Task Timer, start or pause an existing countown, and get information about the countdown time remaining.  Using Siri Shortocuts is a bit easier, while using URL schemes allows interaction with a broader array of third-party apps.</p>
+					<h3>Creating Siri Shortcuts</h3>
+					<p>To create a new Siri shortcut, simply tap the button labeled "Siri Shortcuts" on the settings panel and select the type of shortcut you would like to create. You will be asked to record an activation phrase, which you will then be able to use to activate the command by talking to Siri. You will also be able to call the command from a shortcut you've created using Apple's Shortcuts app.</p>
+					<h3>URL Schemes</h3>
+					<p>You can lunch and configure Visual Task Timer by calling a URL from Shortcuts, Safari, Launch Center Pro and other third-party apps.  In addition, Visual Task Timer supports the x-Callback protocol, allowing other apps to request information about Visual Task Timer's current status.</p>
+					<p>URLs used to invoke Visual Task Timer follow the structure
+					<pre><code>visualtasktimer://x-callback-url/<strong>ACTION</strong>?<strong>PARAMETERS</strong></pre></code>
+					where <strong>ACTION</strong> is a string describing any action to be taken and <strong>PARAMETERS</strong> is a string of &-separated key=value pairs defining any parameters to be passed to Visual Task Timer. Some elements of this structure may be omitted.</p>
+					<h3>Launching Visual Task Timer from Another App</h3>
+					<p>To launch Visual Task Timer from another app, call the URL
+					<pre><code>visualtasktimer://</pre></code>
+					<p>Visual Task Timer supports four actions: "reset", "start", "pause", and "play." In some cases, the behavior of these actions can be modified by setting optional "hours" and "minutes" parameters.</p>
+					<p>To launch Visual Task Timer and reset the countdown clock without starting the timer running, call
+					<pre><code>visualtasktimer://x-callback-url/reset</pre></code>
+					To reset the timer for 45 minutes but not start it running, call
+					<pre><code>visualtasktimer://x-callback-url/reset?minutes=45</pre></code>
+					To start a new countdown timer running, call
+					<pre><code>visualtasktimer://x-callback-url/start</pre></code>
+					To start a new countdown timer for 1 hour and 30 minutes, call
+					<pre><code>visualtasktimer://x-callback-url/start?hours=1&minutes=30</pre></code>
+					<em>Note that issuing the "start" or "reset" commands will cancel any timer that is currently running.</em></p>
+					<p>To launch Visual Task Timer and pause the countdown if one is running, call
+					<pre><code>visualtasktimer://x-callback-url/pause</pre></code>
+					To launch Visual Task Timer and restart a paused countdown, call
+					<pre><code>visualtasktimer://x-callback-url/play</pre></code>
+					For actions that require the caller to specify times, one may either use the "hours" and "minutes" parameters or simply the "minutes" parameter.  So, for example, one could set a timer for 1 hour and 45 minutes by either including the parameter string "hours=1&minutes=45" or the string "minutes=105".</p>
+					<h3>x-Callback Support</h3>
+					<p>The x-Callback URL protocol provides a way for iOS apps to request information from one another.  Under this protocol, a sending app calls a specially formatted URL which launches the receiving app.  The receiving app then responds by calling a URL that invokes the calling app and passes along the required data.  See <a href="http://x-callback-url.com/" target="_blank" rel="noopener">x-callback-url.com</a> for a description of the x-callback protocol.</p>
+					<p>To request that Visual Task Timer report the current time remaining and play/paused state, call
+					<pre><code>visualtasktimer://x-callback-url?x-source=<strong>SOURCEAPP</strong>&x-success=<strong>SUCCESSURL</strong>&x-error=<strong>ERRORURL</strong></pre></code>
+					where <strong>SOURCEAPP</strong> is the name of the calling app, <strong>SUCCESSURL</strong> is a URL to be called if the information request is successful, and <strong>ERRORURL</strong> is a URL to be called if the request fails.</p>
+					<p>If the request is successful, Visual Task Timer will call the URL
+					<pre><code>SUCCESSURL?remaining=<strong>XX</strong>&total=<strong>YY</strong>&paused=<strong>YY</strong></pre></code>
+					where <strong>XX</strong> is the number of seconds remaining in the countdown, <strong>YY</strong> is the total number of seconds in the countdown, and <strong>ZZ</strong> is either "true" or "false" depending on whether or not the timer is paused.  <strong>XX</strong> will be a negative value if the overtime clock is running.  It is the calling app's responsibility to parse the parameter string passed back by Visual Task Timer.</p>
+					<p>For example, if Sending App with the URL scheme "sendingapp" wished to query the time remaining, it might call the URL
+					<pre><code>visualtasktimer://x-callback-url?x-source=SendingApp&x-success=sendingapp://successaction&x-error=sendingapp://erroraction</pre></code>
+					If Visual Task Timer is currently running a 2 hour countdown with 20 minutes remaining, it would would then respond by calling
+					<pre><code>sendingapp://successaction?remaining=1200&total=259200&paused=false</pre></code>
+					The callback can be combined with any of the actions described above by simply including the x-callback parameters in the URL's parameter string.  For example, to pause Visual Task Timer and request a callback URL, Sending App might call
+					<pre><code>visualtasktimer://x-callback-url/pause?x-success=sendingapp://successaction&x-error=sendingapp://erroraction</pre></code>
+					Actions will be performed before Visual Task Timer's state is returned, so, in this example, successfully invoking the "pause" action would ensure that the response URL will include the parameter "paused=true".</p>
+					<h3>Examples</h3>
+					<p><a href="https://itunes.apple.com/us/app/shortcuts/id915249334" target="_blank" rel="noopener">Shortcuts</a> from Apple is one of a number of powerful iOS automation apps that make it easy to make use of URL schemes.  The following examples illustrate a couple of the ways Shortcuts can be used to enhance the functionality of Visual Task Timer.</p>
+					<p><a href="https://workflow.is/workflows/c59a88b39d8f448ea1fda9f930ba04f2" target="_blank" rel="noopener">Visual Task Timer Presets</a> - This workflow presents the user with a menu of agenda items for a hypothetical workshop.  Once an item is selected, Workflow launches Visual Task Timer and starts a new countdown timer.</p>
+					<p><a href="https://workflow.is/workflows/e351ee9dc59c468a85ce6eaea8d055d9">Speak Timer Status</a> - This workflow queries Visual Task Timer for the current countdown timer status and report the result out loud.</p>
+				</div>
+			</main>

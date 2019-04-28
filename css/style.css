@@ -8,7 +8,7 @@
 	rgb(201,188,153);	gold 
 	rgb(141,113,113);	red clay 
 	rgb(234,236,238);	white clouds 
-	rgb(191,154,157);	pink rocks 
+	rgb(191,114,117);	pink rocks 
 	rgb(113,63,62);		dark red clay 
 	rgb(62,68,85);		dark blue rocks 
 
@@ -20,7 +20,8 @@
 /* color theme */
 
 body {
-	background-color: rgb(113,63,62);	/* dark red clay */}
+	background-color: rgb(113,63,62);	/* dark red clay */
+}
 
 #nav-bar {
 	background-color: rgb(113,63,62);	/* dark red clay */
@@ -28,11 +29,11 @@ body {
 }
 
 .nav-item:hover {
-  	background-color: rgb(191,154,157);	/* pink rocks */
+  	background-color: rgb(191,114,117);	/* pink rocks */
 }
 
 .dropdown-title:hover{
-	background-color: rgb(191,154,157);	/* pink rocks */	
+	background-color: rgb(191,114,117);	/* pink rocks */	
 }
 
 .dropdown-item {
@@ -40,7 +41,7 @@ body {
 }
 
 .dropdown-item:hover {
-	background-color: rgb(191,154,157);	/* pink rocks */
+	background-color: rgb(191,114,117);	/* pink rocks */
 }
 
 #title-bar {
@@ -53,7 +54,7 @@ body {
 }
 
 .app-box:hover {
-	background-color: rgb(191,154,157);	/* pink rocks */	
+	background-color: rgb(191,114,117);	/* pink rocks */	
 }
 
 #index-body {
@@ -85,6 +86,11 @@ body {
 	color: rgb(202,43,47);				/* magic castle red */
 }
 
+.app-suppliment {
+	background-color: rgb(193,213,226);	/* sky blue */ 
+	color: rgb(62,68,85);				/* dark blue rocks */ 	
+}
+
 .app-boxes {
 	background-color: inherit;
 }
@@ -92,6 +98,11 @@ body {
 .app-article {
 	background-color: inherit;
 	color: inherit;
+}
+
+pre {
+	background-color: black;
+	color: rgb(58, 245, 51);	/* classic green text */
 }
 
 body a {
@@ -226,6 +237,10 @@ header {
 .article-image {
 	float: right;
 	margin: 2%;
+}
+
+pre {
+	overflow-x:auto; 
 }
 
 /* App boxes */
