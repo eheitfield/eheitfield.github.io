@@ -8,87 +8,88 @@
 	rgb(201,188,153);	gold 
 	rgb(141,113,113);	red clay 
 	rgb(234,236,238);	white clouds 
-	rgb(191,114,117);	pink rocks 
+	rgb(191,90,95);		pink rocks 
 	rgb(113,63,62);		dark red clay 
 	rgb(62,68,85);		dark blue rocks 
 
 	rgb(1,14,26);		doppler ball blue
 	rgb(119,208,253)	magic castle blue
 	rgb(202,43,47);		magic castle red 
+	rgb(58, 245, 51);	classic terminal text green
 */
 
 /* color theme */
 
 body {
-	background-color: rgb(113,63,62);	/* dark red clay */
+	background-color: rgb(113,63,62);
 }
 
 #nav-bar {
-	background-color: rgb(113,63,62);	/* dark red clay */
-	color: rgb(234,236,238);			/* white clouds */ 
+	background-color: rgb(113,63,62);	
+	color: rgb(234,236,238);		 
 }
 
 .nav-item:hover {
-  	background-color: rgb(191,114,117);	/* pink rocks */
+  	background-color: rgb(191,90,95);
 }
 
 .dropdown-title:hover{
-	background-color: rgb(191,114,117);	/* pink rocks */	
+	background-color: rgb(191,90,95);	
 }
 
 .dropdown-item {
-	background-color: rgb(113,63,62);	/* dark red clay */
+	background-color: rgb(113,63,62);
 }
 
 .dropdown-item:hover {
-	background-color: rgb(191,114,117);	/* pink rocks */
+	background-color: rgb(191,90,95);
 }
 
 #title-bar {
-	color: rgb(193,213,226);			/* white clouds */ 
+	color: rgb(235,236,238);
 }
 
 .app-box {
-	background-color: rgb(201,188,153);	/* gold */
-	color: rgb(62,68,85);				/* dark blue rocks */ 
+	background-color: rgb(201,188,153);
+	color: rgb(62,68,85);			
 }
 
 .app-box:hover {
-	background-color: rgb(191,114,117);	/* pink rocks */	
+	background-color: rgb(191,90,95);
 }
 
 #index-body {
-	background-color: rgb(193,213,226);	/* sky blue */ 
+	background-color: rgb(193,213,226);
 }
 
 #our-congress-body {
-	background-color: rgb(193,213,226);	/* sky blue */ 
-	color: rgb(62,68,85);				/* dark blue rocks */ 
+	background-color: rgb(193,213,226);
+	color: rgb(62,68,85); 
 }
 
 #visual-task-timer-body {
-	background-color: rgb(193,213,226);	/* sky blue */ 
-	color: rgb(62,68,85);				/* dark blue rocks */ 
+	background-color: rgb(193,213,226); 
+	color: rgb(62,68,85); 
 }
 
 #doppler-ball-body {
-	background-color: rgb(1,14,26);		/* dark dark blue */
+	background-color: rgb(1,14,26);
 	color: white;
 }
 
 #placemark-body {
-	background-color: rgb(193,213,226);	/* sky blue */ 
-	color: rgb(62,68,85);				/* dark blue rocks */ 
+	background-color: rgb(193,213,226);
+	color: rgb(62,68,85); 
 }
 
 #magic-castle-body {
-	background-color: rgb(119,208,253);	/* magic castle blue */
-	color: rgb(202,43,47);				/* magic castle red */
+	background-color: rgb(119,208,253);
+	color: rgb(202,43,47);
 }
 
 .app-suppliment {
-	background-color: rgb(193,213,226);	/* sky blue */ 
-	color: rgb(62,68,85);				/* dark blue rocks */ 	
+	background-color: rgb(193,213,226);
+	color: rgb(62,68,85);
 }
 
 .app-boxes {
@@ -102,20 +103,20 @@ body {
 
 pre {
 	background-color: black;
-	color: rgb(58, 245, 51);	/* classic green text */
+	color: rgb(58, 245, 51);
 }
 
 body a {
-	color: rgb(113,63,62);		/* dark red clay */ 
+	color: rgb(113,63,62);
 }
 
 footer {
-	background-color: rgb(113,63,62);	/* dark red clay */
-	color: rgb(234,236,238);			/* white clouds */ 
+	background-color: rgb(113,63,62);
+	color: rgb(234,236,238); 
 }
 
 footer a {
-	color: rgb(193,213,226);		/* sky blue */ ;
+	color: rgb(193,213,226);
 }
 
 /* Overall format */
@@ -140,7 +141,7 @@ header {
 #title-bar{
 	position: relative; 
 	top: 0px; 
-	margin: 0px;
+	margin: 0% 0% 0.3% 0%;
 	padding: 0px;
 	cursor: pointer;
 }
@@ -164,11 +165,14 @@ header {
 
 #title-bar h1 {
 	font-size: 5vw;
-	margin-bottom: 0.25%; 
+	margin: 0 auto 0.25em auto; 
+	width: 80%
 }
 
 #title-bar h2 {
 	font-size: 3vw;
+	margin: 0 auto 0 auto;
+	width: 80%
 }
 
 /* Navigation bar */
@@ -227,7 +231,7 @@ header {
 	padding-bottom: 6%;
 }
 
-.app-store-badge{
+.app-store-badge {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 2em;
@@ -251,6 +255,7 @@ pre {
 	align-items: stretch;
 	justify-content: space-between;
 	padding-top: 0%;
+	margin: 0px;
 	cursor: pointer;
 }
 
@@ -305,6 +310,14 @@ footer {
 /* responsive design for small screens */
 
 @media screen and (max-width: 800px) {
+
+	#title-bar h1 {
+		font-size: 2em;
+	}
+
+	#title-bar h2 {
+		font-size: 1.25em;
+	}
 
 	.app-title {
 		font-size: 2em;
