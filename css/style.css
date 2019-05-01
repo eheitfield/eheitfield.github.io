@@ -245,7 +245,7 @@ header {
 
 pre {
 	overflow-x:auto; 
-	padding: 0.75em 0 0.75em 0;
+	padding: 0.75em 0 0.75em 0.5em;
 	font-size: 1em;
 }
 
