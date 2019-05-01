@@ -1,8 +1,7 @@
 
 /* Color Palette
 
-	A southwest palette extracted from an image of the Grand Canyon
-
+	Southwest palette extracted from an image of the Grand Canyon
 	rgb(193,213,226);	sky blue 
 	rgb(215,171,160);	sand
 	rgb(201,188,153);	gold 
@@ -10,8 +9,9 @@
 	rgb(234,236,238);	white clouds 
 	rgb(191,90,95);		pink rocks 
 	rgb(113,63,62);		dark red clay 
-	rgb(62,68,85);		dark blue rocks 
+	rgb(62,68,85);		dark blue rocks
 
+	Special colors to match specific apps
 	rgb(1,14,26);		doppler ball blue
 	rgb(119,208,253)	magic castle blue
 	rgb(202,43,47);		magic castle red 
@@ -55,7 +55,7 @@ body {
 }
 
 .app-box:hover {
-	background-color: rgb(191,90,95);
+	background-color: rgb(215,171,160);
 }
 
 #index-body {
@@ -245,6 +245,8 @@ header {
 
 pre {
 	overflow-x:auto; 
+	padding: 0.75em 0 0.75em 0;
+	font-size: 1em;
 }
 
 /* App boxes */
