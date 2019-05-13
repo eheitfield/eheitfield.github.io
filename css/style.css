@@ -138,20 +138,20 @@ header {
 	z-index: 1;
 }
 
-#title-bar{
-	position: relative; 
-	top: 0px; 
-	margin: 0% 0% 0.3% 0%;
+#title-bar {
+	position: relative;;
+	top: 0px;
+	margin: 0% 0% 0.2% 0%;
 	padding: 0px;
-	cursor: pointer;
 }
+
 
 #page-title {
 	/* center in title bar */
 	position: absolute;
 	top: 50%;
-	left: 50%;
-  	transform: translate(-50%, -50%);
+	left: 50%; 
+  	transform: translate(-50%, -50%); 
 	text-align: center;
 	width: 100%;
 }
@@ -218,7 +218,6 @@ header {
 .show-dropdown {
 	display: block;
 }
-
 
 /* Content */
 

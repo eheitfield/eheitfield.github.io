@@ -9,14 +9,13 @@ if (document.getElementById("page-title")) {
 document.getElementById("item-home").onclick = homeSelected;
 document.getElementById("apps-dropdown-title").onclick = appDropdownSelected;
 document.getElementById("contact-dropdown-title").onclick = contactSelected;
-var appBoxes = document.getElementsByClassName("app-box");
-for (box of appBoxes) {
-	box.onclick = appSelected;
-}
-var navItems = document.getElementsByClassName("dropdown-item");
-for (item of navItems) {
-	item.onclick = appSelected;
-}
+
+document.querySelectorAll(".app-box").forEach(function(element) {
+	element.onclick = appSelected;
+});
+document.querySelectorAll(".dropdown-item").forEach(function(element) {
+	element.onclick = appSelected;
+});
 
 function adjustPageLayout() {
 	var header = document.getElementsByTagName("header")[0];
