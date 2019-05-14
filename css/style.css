@@ -263,14 +263,14 @@ pre {
 .app-box {
 	flex: 1;
 	box-sizing: border-box;
-	padding: 2%;
-	margin: 0% 0% 0.5% 0%;  /* top right bottom left */
+	padding: 2.5em;
+	margin-bottom: 0.5em;
 	width: 100vw;
 }
 
 .app-title {
 	margin-top: 0em;
-	margin-bottom: 0.25em;
+	margin-bottom: 0.15em;
 	font-size: 2.5em;
 	width: 100%;
 	text-align: center;
@@ -278,7 +278,7 @@ pre {
 
 .app-text {
 	margin-top: 0em;
-	margin-bottom: 0.75em;
+	margin-bottom: 1em;
 	font-size: 1.25em;
 	text-align: center;
 }
