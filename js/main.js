@@ -25,7 +25,9 @@ function adjustPageLayout() {
 
 function appSelected(event) {
 	var id = event.currentTarget.id;
-	if (id == "item-our-congress" || id == "box-our-congress") {
+	if (id == "item-tex-anywhere" || id == "box-tex-anywhere") {
+		window.location.href = "./tex-anywhere.html"
+	} else if (id == "item-our-congress" || id == "box-our-congress") {
 		window.location.href = "./our-congress.html"
 	} else if (id == "item-visual-task-timer" || id == "box-visual-task-timer") {
 		window.location.href = "./visual-task-timer.html"
