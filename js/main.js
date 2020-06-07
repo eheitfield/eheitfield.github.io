@@ -35,6 +35,8 @@ function appSelected(event) {
 		window.location.href = "./doppler-ball.html"
 	} else if (id == "item-placemark-plus" || id == "box-placemark-plus") {
 		window.location.href = "./placemark.html"
+	} else if (id == "item-radix" || id == "box-radix") {
+		window.location.href = "./radix.html"
 	} else if (id == "item-magic-castle" || id == "box-magic-castle") {
 		window.location.href = "./magic-castle.html"
 	} else {
