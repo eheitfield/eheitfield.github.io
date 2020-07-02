@@ -9,6 +9,7 @@ if (document.getElementById("page-title")) {
 document.getElementById("item-home").onclick = homeSelected;
 document.getElementById("apps-dropdown-title").onclick = appDropdownSelected;
 document.getElementById("contact-dropdown-title").onclick = contactSelected;
+document.getElementById("covid-dropdown-title").onclick = covidSelected;
 
 document.querySelectorAll(".app-box").forEach(function(element) {
 	element.onclick = appSelected;
@@ -50,6 +51,10 @@ function homeSelected(event) {
 
 function contactSelected(event) {
 	window.location.href = "#contact-pterosaur"
+}
+
+function covidSelected(event) {
+	window.location.href = "./covid.html"
 }
 
 function appDropdownSelected(event) {
