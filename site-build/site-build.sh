@@ -1,5 +1,5 @@
 #!/bin/bash
-pageList="index tex-anywhere our-congress doppler-ball visual-task-timer placemark magic-castle our-congress-privacy visual-task-timer-privacy placemark-privacy visual-task-timer-automation tex-anywhere-privacy radix radix-privacy celestial-clock celestial-clock-privacy"
+pageList="index tex-anywhere our-congress doppler-ball visual-task-timer pixel pixel-privacy placemark magic-castle our-congress-privacy visual-task-timer-privacy placemark-privacy visual-task-timer-automation tex-anywhere-privacy radix radix-privacy celestial-clock celestial-clock-privacy"
 for page in $pageList
 do 
 	outfile="$page"'.html'

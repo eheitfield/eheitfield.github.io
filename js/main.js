@@ -42,6 +42,8 @@ function appSelected(event) {
 		window.location.href = "./radix.html"
 	} else if (id == "item-magic-castle" || id == "box-magic-castle") {
 		window.location.href = "./magic-castle.html"
+	} else if (id == "item-pixel" || id == "box-pixel") {
+		window.location.href = "./pixel.html"
 	} else {
 		alert(id)
 	}

@@ -83,8 +83,18 @@ body {
 }
 
 #celestial-clock-body {
-	background-color: rgb(1,14,26);
+	background-color: rgb(193,213,226); 
 	color: white;
+}
+
+#radix-body {
+	background-color: rgb(193,213,226); 
+	color: rgb(62,68,85); 
+}
+
+#pixel-body {
+	background-color: rgb(193,213,226); 
+	color: rgb(62,68,85); 
 }
 
 #placemark-body {
